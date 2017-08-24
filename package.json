@@ -1,5 +1,5 @@
 {
-  "name": "task-cli",
+  "name": "tasker-cli",
   "version": "1.0.0",
   "description": "a cli tool for creating tasks",
   "main": "index.js",
