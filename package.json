@@ -1,0 +1,16 @@
+{
+  "name": "task-cli",
+  "version": "1.0.0",
+  "description": "a cli tool for creating tasks",
+  "main": "index.js",
+  "repository": "https://github.com/aayush962/task-cli.git",
+  "author": "doubleA <aayush962@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^2.11.0",
+    "inquirer": "^3.2.2",
+    "mongoose": "^4.11.8"
+  },
+  "preferGlobal": true,
+  "bin": "./bin/index.js"
+}
