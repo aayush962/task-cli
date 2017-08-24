@@ -16,4 +16,19 @@ const addTask = (task) => {
     });
 };
 
-module.exports = {addTask};
+const showTasks = () => {
+  Task.find({})
+    .then((tasks) => {
+      tasks = tasks.reverse();
+      tasks.map((task) => {
+        console.log(chalk.green(task.text) + ' created at ' + chalk.blue(task.created_at));
+      });
+      db.disconnect();
+    })
+    .catch((err) => {
+      console.log(chalk.red('Some error occured. Make sure mongo sercive is running. Run mongod to start mongo service'))
+      db.disconnect();
+    })
+};
+
+module.exports = {addTask, showTasks};

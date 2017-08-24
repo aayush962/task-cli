@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 const cli = require('commander');
 const { prompt } = require('inquirer');
-const {addTask} = require('./functions');
+const {addTask, showTasks} = require('./functions');
 
 const questions = [
   {
@@ -22,7 +22,15 @@ cli
   .action((text) => {
     prompt(questions).then((answers) => {
       addTask({text: answers.text, created_at: new Date});
-    })
+    });
+  });
+
+cli
+  .command('show')
+  .alias('s')
+  .description('Show all tasks')
+  .action(() => {
+    showTasks();
   })
 
 cli.parse(process.argv);
