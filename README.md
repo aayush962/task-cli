@@ -17,7 +17,7 @@ npm install -g tasker-cli
 - Show tasks with the `tasker-cli show` command
 - Question/Answer based interface
 
-###Upcoming
+(Todo)
 
 - Find tasks with the `tasker-cli find` command
 - Mark tasks done with the `tasker-cli done` command
